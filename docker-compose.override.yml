@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  integrationContainer:
+    image: myppi/integrationcontainer
+    build:
+      context: test/MyAPI.Integration
+      dockerfile: Dockerfile
+    depends_on:
+      - myapi

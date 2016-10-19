@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  myapi:
+    image: user/myapi${TAG}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80"

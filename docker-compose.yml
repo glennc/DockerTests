@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  myapi:
+    image: user/myapi
+    build:
+      context: src/MyAPI
+      dockerfile: Dockerfile
+      args:
+          source: ${DOCKER_BUILD_SOURCE}
+    ports:
+      - "80"

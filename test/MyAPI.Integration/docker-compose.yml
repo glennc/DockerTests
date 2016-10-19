@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  myapi.integration:
+    image: user/myapi.integration${TAG}
+    build:
+      context: .
+      dockerfile: Dockerfile
