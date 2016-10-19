@@ -1,0 +1,8 @@
+FROM microsoft/dotnet:1.0.0-preview2-sdk
+WORKDIR /sln
+COPY ./tmp/ ./
+COPY global.json .
+RUN dotnet restore
+COPY . .
+RUN dotnet test ./test/MyAPI.Test/project.json
+RUN dotnet publish ./src/MyAPI/project.json

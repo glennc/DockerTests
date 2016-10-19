@@ -36,7 +36,7 @@ namespace MyAPI
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
-
+            Console.WriteLine("test");
             app.UseMvc();
         }
     }

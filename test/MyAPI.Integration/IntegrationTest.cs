@@ -21,5 +21,12 @@ namespace MyAPI.Integration
             var test = _httpClient.GetAsync("http://myapi/api/values").Result;
             Assert.True(test.IsSuccessStatusCode);
         }
+
+        [Fact]
+        public void CanGetNewAPI()
+        {
+            var test = _httpClient.GetAsync("http://myapi/api/new").Result;
+            Assert.True(test.IsSuccessStatusCode);
+        }
     }
 }
